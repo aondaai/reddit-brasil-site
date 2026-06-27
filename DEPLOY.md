@@ -26,7 +26,10 @@ O Render faz o deploy sozinho.
 - `/` — `index.html` (home: hero, serviços, método, por que Reddit, planos, contato)
 - `/reddit-seo-geo/` — serviço flagship SEO & GEO/AEO
 - `/reddit-ads/` — serviço Reddit Ads
+- `/codigo-de-conduta/` — página de confiança (white-hat / Zero Spam)
+- `/blog/` — índice do blog
 - `/blog/quanto-custa-anunciar-no-reddit/` — post âncora (custo de Reddit Ads)
+- `/blog/como-crescer-um-subreddit-do-zero/` — post âncora (crescimento de comunidade)
 - `sitemap.xml` · `robots.txt` · `favicon.svg` · `og-image.png`
 
 URLs limpas (sem `.html`) via pastas com `index.html`. Cada página tem `<title>`,
