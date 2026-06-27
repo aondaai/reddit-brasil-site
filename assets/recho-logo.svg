@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 210" role="img" aria-label="RECHO — a full service reddit agency">
+  <!-- Monograma: R duplo (outline + sólido) -->
+  <g>
+    <text x="0" y="158" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="190"
+          fill="none" stroke="#E04A3A" stroke-width="12">R</text>
+    <text x="58" y="172" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="150"
+          fill="#E04A3A">R</text>
+  </g>
+  <!-- Wordmark -->
+  <text x="228" y="132" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="118"
+        letter-spacing="4" fill="#E04A3A">RECHO</text>
+  <!-- Tagline -->
+  <text x="232" y="182" font-family="Arial, Helvetica, sans-serif" font-weight="500" font-size="33"
+        letter-spacing="1.5" fill="#E04A3A">a full service reddit agency</text>
+</svg>
