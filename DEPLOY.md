@@ -30,6 +30,8 @@ O Render faz o deploy sozinho.
 - `/blog/` — índice do blog
 - `/blog/quanto-custa-anunciar-no-reddit/` — post âncora (custo de Reddit Ads)
 - `/blog/como-crescer-um-subreddit-do-zero/` — post âncora (crescimento de comunidade)
+- `/blog/como-construir-karma-no-reddit/` — post âncora (karma / regra 70-30)
+- `/blog/reddit-para-seo-e-busca-por-ia/` — post âncora (GEO/AEO, educacional)
 - `sitemap.xml` · `robots.txt` · `favicon.svg` · `og-image.png`
 
 URLs limpas (sem `.html`) via pastas com `index.html`. Cada página tem `<title>`,

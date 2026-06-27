@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Como construir karma no Reddit do jeito certo (sem ser banido) | Reddit Brasil</title>
+  <meta name="description" content="O que é karma no Reddit, como ganhar karma rápido sem ser banido e a regra 70/30 (cultura vs produto). Plano de 30 dias para chegar a 1.000+ de karma." />
+  <link rel="canonical" href="https://redditbrazil.com.br/blog/como-construir-karma-no-reddit/" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Reddit Brasil" />
+  <meta property="og:title" content="Como construir karma no Reddit do jeito certo" />
+  <meta property="og:description" content="O que é karma, como ganhar rápido sem ser banido e a regra 70/30 (cultura vs produto). Plano de 30 dias." />
+  <meta property="og:url" content="https://redditbrazil.com.br/blog/como-construir-karma-no-reddit/" />
+  <meta property="og:image" content="https://redditbrazil.com.br/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&family=Space+Mono:wght@700&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Como construir karma no Reddit do jeito certo (sem ser banido)",
+    "description": "O que é karma, como ganhar rápido sem ser banido e a regra 70/30 (cultura vs produto), com um plano de 30 dias.",
+    "inLanguage": "pt-BR",
+    "datePublished": "2026-06-27",
+    "dateModified": "2026-06-27",
+    "author": { "@type": "Organization", "name": "Reddit Brasil" },
+    "publisher": { "@type": "Organization", "name": "Reddit Brasil", "logo": { "@type": "ImageObject", "url": "https://redditbrazil.com.br/og-image.png" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://redditbrazil.com.br/blog/como-construir-karma-no-reddit/" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "O que é karma no Reddit?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Karma é a pontuação de reputação de uma conta no Reddit, somada a partir dos upvotes que seus posts e comentários recebem. Não é uma métrica de vaidade: muitos subreddits exigem um mínimo de karma e de idade de conta para permitir postar, e karma alto sinaliza que a conta contribui de verdade para as comunidades." }
+      },
+      {
+        "@type": "Question",
+        "name": "Como ganhar karma rápido no Reddit sem ser banido?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Priorizando encaixe cultural em vez de promover produto: comentar de forma útil, participar do humor e do tom de cada comunidade e só depois trazer temas ligados à marca. A regra prática é 70% de conteúdo de encaixe cultural e 30% de encaixe de produto. Comprar upvotes ou usar contas falsas leva a banimento." }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual a regra 70/30 de karma?",
+        "acceptedAnswer": { "@type": "Answer", "text": "É a proporção recomendada para construir karma de forma saudável: 70% do esforço em conteúdo de encaixe cultural (humor, opiniões, participação genuína) e 30% em conteúdo de encaixe de produto (temas ligados ao que a marca oferece). Em testes, a conta focada em cultura chegou a 2.500 de karma em 30 dias, contra ~50 da conta focada só em produto." }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto karma preciso ter para postar?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Depende do subreddit, mas comunidades maiores (100 mil+ membros) costumam exigir karma e idade mínima de conta para liberar posts. Uma meta realista de partida é 1.000+ de karma em 30 dias, o suficiente para participar da maioria das comunidades relevantes." }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --verde-vivo:#00A859; --verde-100:rgba(0,168,89,.12); --amarelo:#FFDF00;
+      --orange-500:#FF4500; --orange-400:#FF5C29; --orange-100:rgba(255,69,0,.10); --azul-vivo:#2F80ED;
+      --bg-900:#0E1116; --bg-800:#161A21; --bg-700:#1E232C; --bg-600:#2A313C;
+      --text-100:#FFFFFF; --text-200:#F4F6F8; --text-300:#AEB6C2; --text-400:#6B7480;
+      --font-display:"Poppins","Montserrat",system-ui,sans-serif; --font-body:"Inter",system-ui,sans-serif; --font-mono:"Space Mono",ui-monospace,monospace;
+      --space-4:16px; --space-5:24px; --space-6:32px; --space-7:48px; --space-8:64px; --space-9:96px;
+      --radius-md:10px; --radius-lg:16px; --radius-xl:24px; --radius-pill:999px;
+      --shadow-card:0 16px 44px rgba(0,0,0,.5);
+      --glow-orange:0 0 0 1px rgba(255,69,0,.4),0 8px 30px rgba(255,69,0,.25);
+      --grad-brasa:linear-gradient(135deg,#FF5C29 0%,#FF4500 100%);
+      --grad-brasil:linear-gradient(90deg,#1FBE6E 0%,#FFDF00 50%,#2F80ED 100%);
+    }
+    *{ box-sizing:border-box; margin:0; padding:0; }
+    html{ scroll-behavior:smooth; }
+    body{ font-family:var(--font-body); background:var(--bg-900); color:var(--text-200); line-height:1.7; -webkit-font-smoothing:antialiased;
+      background-image:radial-gradient(700px 320px at 85% -12%, rgba(0,168,89,.10), transparent 60%); background-repeat:no-repeat; }
+    .wrap{ max-width:1100px; margin:0 auto; padding:0 24px; }
+    .article{ max-width:760px; margin:0 auto; padding:0 24px; }
+    h1,h2,h3{ font-family:var(--font-display); color:var(--text-100); letter-spacing:-.01em; }
+    h1{ font-size:clamp(2rem,4.5vw,3rem); font-weight:800; line-height:1.08; letter-spacing:-.02em; }
+    h2{ font-size:clamp(1.4rem,3vw,1.75rem); font-weight:700; line-height:1.2; margin:var(--space-8) 0 var(--space-4); }
+    h3{ font-size:1.15rem; font-weight:700; margin:var(--space-6) 0 8px; }
+    p{ color:var(--text-300); margin-bottom:var(--space-4); }
+    a{ color:var(--azul-vivo); }
+    .verde{ color:var(--verde-vivo); } .reddit{ color:var(--orange-500); }
+    .eyebrow{ font-size:.75rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--verde-vivo); display:inline-block; margin-bottom:var(--space-4); }
+    header{ position:sticky; top:0; z-index:10; backdrop-filter:blur(10px); background:rgba(14,17,22,.7); border-bottom:1px solid var(--bg-600); }
+    .nav{ display:flex; align-items:center; justify-content:space-between; height:64px; }
+    .logo{ font-family:var(--font-display); font-weight:800; font-size:1.15rem; color:var(--text-100); text-decoration:none; }
+    .logo .dot{ color:var(--orange-500); }
+    .btn{ display:inline-block; font-weight:600; text-decoration:none; padding:12px 24px; border-radius:var(--radius-md); transition:.18s; background:var(--grad-brasa); color:var(--bg-900); }
+    .btn:hover{ box-shadow:var(--glow-orange); }
+    .meta{ color:var(--text-400); font-size:.85rem; margin-bottom:var(--space-6); } .meta span{ color:var(--verde-vivo); }
+    .tldr{ background:var(--bg-700); border:1px solid rgba(255,255,255,.07); border-left:3px solid var(--verde-vivo); border-radius:var(--radius-lg); padding:var(--space-6); box-shadow:var(--shadow-card); margin:var(--space-6) 0; }
+    .tldr strong{ color:var(--text-100); }
+    table{ width:100%; border-collapse:collapse; margin:var(--space-5) 0; font-size:.95rem; }
+    th,td{ text-align:left; padding:12px 14px; border-bottom:1px solid var(--bg-600); }
+    th{ font-family:var(--font-display); color:var(--text-100); font-weight:600; font-size:.85rem; text-transform:uppercase; letter-spacing:.05em; }
+    td:first-child{ color:var(--text-200); } tr.hl td{ color:var(--verde-vivo); font-weight:600; }
+    ul.clean{ list-style:none; margin:var(--space-4) 0; } ul.clean li{ padding:8px 0; color:var(--text-300); }
+    ul.clean li::before{ content:"●"; color:var(--verde-vivo); margin-right:10px; font-size:.7rem; vertical-align:middle; } ul.clean li strong{ color:var(--text-100); }
+    .note{ background:var(--orange-100); border:1px solid rgba(255,69,0,.25); border-radius:var(--radius-md); padding:var(--space-5); font-size:.9rem; color:var(--text-200); margin:var(--space-6) 0; } .note strong{ color:var(--orange-400); }
+    .cta{ background:var(--bg-800); border-radius:var(--radius-xl); padding:var(--space-8); text-align:center; margin:var(--space-9) 0; box-shadow:var(--shadow-card); } .cta h2{ margin-top:0; }
+    footer{ border-top:1px solid var(--bg-600); padding:var(--space-7) 0; color:var(--text-400); font-size:.85rem; margin-top:var(--space-8); }
+    .footstrip{ height:3px; background:var(--grad-brasil); opacity:.85; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap nav">
+      <a href="/" class="logo">reddit brasil<span class="dot">●</span></a>
+      <a href="/#contato" class="btn">Agende uma call</a>
+    </div>
+  </header>
+
+  <article class="article" style="padding-top:var(--space-9);">
+    <span class="eyebrow">Comunidade · Guia</span>
+    <h1>Como construir <span class="verde">karma</span> no Reddit do jeito certo</h1>
+    <p class="meta">Atualizado em <span>27 de junho de 2026</span> · Leitura de 6 min</p>
+
+    <div class="tldr">
+      <p style="margin-bottom:0;"><strong>Resposta curta:</strong> dá pra chegar a <strong>1.000+ de karma em 30 dias</strong> seguindo a regra <strong>70/30</strong> — 70% de conteúdo de encaixe cultural (humor, participação genuína) e 30% de encaixe de produto. Em testes, a conta focada em cultura fez <strong>2.500 de karma em 30 dias</strong>; a focada só em produto, ~50 em 3 meses. Memes recebem cerca de <strong>10x mais upvotes</strong> que post de produto. O que derruba é forçar a marca cedo demais.</p>
+    </div>
+
+    <h2>O que é karma no Reddit?</h2>
+    <p>Karma é a pontuação de reputação da conta, somada pelos upvotes dos seus posts e comentários. Não é vaidade: muitos subreddits <strong>exigem karma e idade mínima de conta</strong> para liberar postagem. Karma alto sinaliza que a conta contribui de verdade — e é o que abre as portas das comunidades grandes (100 mil+ membros).</p>
+
+    <h2>A regra 70/30: cultura vence produto</h2>
+    <p>O maior erro de marca no Reddit é chegar vendendo. Karma se constrói pelo contrário — encaixando na cultura primeiro:</p>
+    <table>
+      <thead><tr><th>Abordagem</th><th>Resultado (caso real)</th></tr></thead>
+      <tbody>
+        <tr><td>Foco em produto</td><td>~50 de karma em 3 meses</td></tr>
+        <tr class="hl"><td>Foco em cultura (70/30)</td><td>2.500 de karma em 30 dias</td></tr>
+      </tbody>
+    </table>
+    <p>A proporção: <strong>70% encaixe cultural</strong> (humor, opiniões, participação) e <strong>30% encaixe de produto</strong> (temas ligados à marca). Memes recebem ~10x mais upvotes que posts de produto — mas só funcionam quando são genuínos, nunca com logo forçado.</p>
+
+    <h2>Como ganhar karma rápido sem ser banido</h2>
+    <p>Um plano de 3 fases ao longo de 30 dias:</p>
+    <ul class="clean">
+      <li><strong>Fase 1 — comentários:</strong> respostas úteis em threads ativas; é onde o karma inicial cresce mais rápido</li>
+      <li><strong>Fase 2 — voz e humor:</strong> memes e posts no tom da comunidade, mapeando a identidade cultural da marca</li>
+      <li><strong>Fase 3 — autoridade:</strong> conteúdo de thought leadership entrando nos subs ligados ao produto</li>
+    </ul>
+    <p>Linha de tempo típica: <strong>~200 de karma na semana 1 → 2.000+ na semana 4.</strong></p>
+
+    <div class="note">
+      <p style="margin-bottom:0;"><strong>Nunca faça:</strong> comprar upvotes, usar contas falsas (throwaways) para se autopromover, ou forçar produto/logo em comunidade de humor. Tudo isso viola as regras do Reddit e leva a banimento — que pode virar "radioativo" e se espalhar por vários subs. Veja nosso <a href="/codigo-de-conduta/">código de conduta</a>.</p>
+    </div>
+
+    <div class="cta">
+      <span class="eyebrow">Karma é trabalho de gente</span>
+      <h2>A gente constrói a presença da sua marca — com voz nativa.</h2>
+      <p style="max-width:54ch;margin:0 auto var(--space-6);">Community managers que falam a língua de cada sub, sem forçar a marca e sem queimar a conta.</p>
+      <a href="mailto:contato@redditbrazil.com" class="btn">Agende uma call estratégica</a>
+      <p style="margin-top:var(--space-5);font-size:.9rem;"><a href="/blog/como-crescer-um-subreddit-do-zero/">Veja também: como crescer um subreddit do zero →</a></p>
+    </div>
+
+  </article>
+
+  <div class="footstrip"></div>
+  <footer>
+    <div class="wrap">
+      <p><strong style="color:var(--text-200);">reddit brasil<span style="color:var(--orange-500);">●</span></strong> — primeira agência brasileira 100% focada em Reddit.</p>
+      <p style="margin-top:12px;">"Reddit" é marca registrada da Reddit, Inc. A Reddit Brasil é uma agência independente e não é afiliada à Reddit, Inc. Casos e benchmarks citados são ilustrativos; resultados variam.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
