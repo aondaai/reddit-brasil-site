@@ -9,6 +9,11 @@
 <meta property="og:description" content="A primeira agência brasileira 100% focada em Reddit. Orgânico, pago e GEO/AEO — sem spam.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://redditbrazil.com.br/">
+<meta property="og:image" content="https://redditbrazil.com.br/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://redditbrazil.com.br/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -103,6 +108,22 @@ h2.sec{font-family:var(--font-display);font-weight:700;font-size:clamp(28px,4vw,
 .card li{font-size:14px;color:var(--text-200);padding:7px 0;border-top:1px solid rgba(255,255,255,.05);display:flex;gap:9px;align-items:flex-start}
 .card li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--verde-vivo);margin-top:8px;flex:none}
 
+/* PRICING */
+.plan .lead-benefit{font-size:11px;font-weight:600;color:var(--verde-vivo);text-transform:uppercase;letter-spacing:.10em;margin-bottom:8px}
+.plan .price{margin:16px 0 4px;display:flex;align-items:baseline;gap:7px;flex-wrap:wrap}
+.plan .price .from{font-size:13px;color:var(--text-400);font-weight:500}
+.plan .price .val{font-family:var(--font-display);font-weight:700;font-size:34px;color:#fff;letter-spacing:-.02em}
+.plan .price .per{font-size:14px;color:var(--text-300)}
+.plan .btn{width:100%;text-align:center;margin-top:22px}
+.outcomes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+@media(max-width:880px){.outcomes{grid-template-columns:1fr}}
+.outcome{display:flex;gap:12px;align-items:flex-start;padding:16px 18px;background:var(--bg-800);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius-md)}
+.outcome .oi{color:var(--verde-vivo);font-size:20px;flex:none;margin-top:1px}
+.outcome h5{font-family:var(--font-display);font-weight:600;font-size:15px;color:#fff;margin-bottom:3px}
+.outcome p{font-size:13px;color:var(--text-300)}
+.outcome p b{color:var(--text-100);font-weight:600}
+.plannote{font-size:12.5px;color:var(--text-400);margin-top:18px;text-align:center}
+
 /* METHOD */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:44px}
 @media(max-width:880px){.steps{grid-template-columns:1fr 1fr}}
@@ -168,6 +189,8 @@ footer .links a:hover{color:#fff}
       <a class="lk" href="#servicos">Serviços</a>
       <a class="lk" href="#metodo">Método</a>
       <a class="lk" href="#porque">Por que Reddit</a>
+      <a class="lk" href="#planos">Planos</a>
+      <a class="lk" href="/blog/quanto-custa-anunciar-no-reddit/">Blog</a>
       <a class="btn btn-primary navcta" href="#contato">Agende uma call</a>
     </nav>
   </div>
@@ -281,6 +304,71 @@ footer .links a:hover{color:#fff}
   </div>
 </section>
 
+<section id="planos" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="eyebrow">Planos</div>
+      <h2 class="sec">Escolha o nível de presença da sua marca <span class="hl">no Reddit</span></h2>
+      <div class="underline"></div>
+      <p class="sec-desc">Três níveis que se somam — de reconhecimento na comunidade à visibilidade em IA e conversão de leads. Pensados para marcas e operações enterprise.</p>
+    </div>
+    <div class="cards">
+      <div class="card plan">
+        <div class="lead-benefit">Reconhecimento &amp; comunidade</div>
+        <div class="ico">◇</div>
+        <h3>Presença</h3>
+        <p>Autoridade orgânica autêntica nos subs certos — a base de toda marca confiável no Reddit.</p>
+        <div class="price"><span class="val">R$ 6.900</span><span class="per">/mês</span></div>
+        <ul>
+          <li>Conta oficial + code of conduct</li>
+          <li>12+ posts e 40–80 respostas de valor/mês</li>
+          <li>Monitoramento de marca e recap diário</li>
+          <li>Construção de subreddit próprio</li>
+          <li>Relatório mensal de performance</li>
+        </ul>
+        <a class="btn btn-secondary" href="#contato">Começar com Presença</a>
+      </div>
+      <div class="card feature plan">
+        <span class="tag">Recomendado</span>
+        <div class="lead-benefit">Visibilidade em IA &amp; SEO</div>
+        <div class="ico">◎</div>
+        <h3>Autoridade</h3>
+        <p>Tudo da Presença + conteúdo âncora que vira resposta citada por ChatGPT, Gemini e Google AI Overviews.</p>
+        <div class="price"><span class="val">R$ 12.900</span><span class="per">/mês</span></div>
+        <ul>
+          <li>Tudo do plano Presença</li>
+          <li>Posts âncora citáveis por LLM</li>
+          <li>Otimização SEO/GEO para busca e IA</li>
+          <li>Rastreio de citações em IA</li>
+          <li>Watch competitivo de share of voice</li>
+        </ul>
+        <a class="btn btn-primary" href="#contato">Falar sobre Autoridade</a>
+      </div>
+      <div class="card plan">
+        <div class="lead-benefit">Conversão de leads</div>
+        <div class="ico">◆</div>
+        <h3>Performance</h3>
+        <p>Operação full-service: autoridade orgânica e em IA somadas a um motor de Reddit Ads com intenção comercial.</p>
+        <div class="price"><span class="from">A partir de</span><span class="val">R$ 24.900</span><span class="per">/mês</span></div>
+        <ul>
+          <li>Tudo do plano Autoridade</li>
+          <li>Reddit Ads + segmentação por sub</li>
+          <li>Criativo nativo e otimização de ROAS</li>
+          <li>Cobertura em subs hostis e gestão de crise</li>
+          <li>Call estratégica semanal 15/15</li>
+        </ul>
+        <a class="btn btn-secondary" href="#contato">Montar plano enterprise</a>
+      </div>
+    </div>
+    <div class="outcomes">
+      <div class="outcome"><span class="oi">◎</span><div><h5>Visibilidade em IA</h5><p>Sua marca citada nas respostas do ChatGPT, Gemini e AI Overviews. <b>Autoridade e Performance.</b></p></div></div>
+      <div class="outcome"><span class="oi">◇</span><div><h5>Reconhecimento na comunidade</h5><p>Presença confiável e bem avaliada nos subs do seu nicho. <b>Todos os planos.</b></p></div></div>
+      <div class="outcome"><span class="oi">◆</span><div><h5>Conversão de leads</h5><p>Reddit Ads de alta intenção com ROAS otimizado. <b>Plano Performance.</b></p></div></div>
+    </div>
+    <p class="plannote">Valores de mensalidade de gestão (fee da agência). O investimento em mídia (Reddit Ads) é à parte e definido por objetivo. Contratos a partir de 6 meses.</p>
+  </div>
+</section>
+
 <section id="contato" style="padding-top:0">
   <div class="wrap">
     <div class="contact">
@@ -308,6 +396,15 @@ footer .links a:hover{color:#fff}
               <option>Ainda não sei — quero orientação</option>
             </select>
           </div>
+          <div class="field"><label for="orcamento">Faixa de investimento mensal</label>
+            <select id="orcamento" name="orcamento">
+              <option>Até R$ 5 mil</option>
+              <option>R$ 5–15 mil</option>
+              <option>R$ 15–25 mil</option>
+              <option>R$ 25 mil+</option>
+              <option>Ainda não sei</option>
+            </select>
+          </div>
           <div class="field"><label for="msg">Mensagem</label><textarea id="msg" name="msg" placeholder="Conte sobre sua marca e seus subs de interesse..."></textarea></div>
           <button class="btn btn-primary" type="submit">Agende uma call estratégica</button>
           <div class="formnote">Ao enviar, abrimos seu e-mail com a mensagem pronta para <span id="mailhint">contato@redditbrazil.com</span>.</div>
@@ -327,7 +424,9 @@ footer .links a:hover{color:#fff}
       </div>
       <div class="links">
         <a href="#servicos">Serviços</a>
-        <a href="#metodo">Método</a>
+        <a href="/reddit-seo-geo/">SEO &amp; IA</a>
+        <a href="/reddit-ads/">Reddit Ads</a>
+        <a href="/blog/quanto-custa-anunciar-no-reddit/">Blog</a>
         <a href="#contato">Contato</a>
       </div>
     </div>
@@ -344,7 +443,7 @@ footer .links a:hover{color:#fff}
     e.preventDefault();
     var g=function(id){return (document.getElementById(id).value||"").trim();};
     var subject="[Reddit Brasil] Contato — "+(g("nome")||"novo lead");
-    var body="Nome: "+g("nome")+"\nE-mail: "+g("email")+"\nSite: "+g("site")+"\nObjetivo: "+g("objetivo")+"\n\nMensagem:\n"+g("msg");
+    var body="Nome: "+g("nome")+"\nE-mail: "+g("email")+"\nSite: "+g("site")+"\nObjetivo: "+g("objetivo")+"\nFaixa de investimento: "+g("orcamento")+"\n\nMensagem:\n"+g("msg");
     window.location.href="mailto:"+EMAIL+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
   });
 })();
