@@ -40,6 +40,8 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:80px}
+#topo{scroll-margin-top:80px}
 body{
   background:var(--bg-900);color:var(--text-200);font-family:var(--font-body);line-height:1.65;-webkit-font-smoothing:antialiased;
   background-image:radial-gradient(1000px 520px at 82% -8%,rgba(0,168,89,.16),transparent 60%),radial-gradient(720px 460px at -8% 6%,rgba(0,168,89,.06),transparent 55%);
@@ -54,7 +56,7 @@ a{color:inherit}
 /* NAV */
 header.nav{position:sticky;top:0;z-index:50;background:rgba(14,17,22,.78);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{font-family:var(--font-display);font-weight:700;font-size:21px;letter-spacing:-.02em;color:#fff;text-decoration:none}
+.brand{font-family:var(--font-display);font-weight:700;font-size:21px;letter-spacing:-.02em;color:#fff;text-decoration:none;white-space:nowrap}
 .brand .dot{color:var(--orange-500)}
 .navlinks{display:flex;gap:6px;align-items:center}
 .navlinks a{color:var(--text-300);text-decoration:none;font-size:14px;font-weight:500;padding:8px 14px;border-radius:var(--radius-pill);transition:.15s}
@@ -67,7 +69,16 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(14,17,22,.78);backdr
 .btn-secondary{background:transparent;border:1px solid var(--bg-600);color:var(--text-200)}
 .btn-secondary:hover{border-color:var(--text-300);color:#fff}
 .navcta{font-size:14px;padding:9px 18px}
-@media(max-width:720px){.navlinks .lk{display:none}}
+.navright{display:flex;align-items:center;gap:6px}
+.navtoggle{display:none;background:transparent;border:1px solid rgba(255,255,255,.12);color:var(--text-200);width:42px;height:42px;border-radius:var(--radius-md);font-size:20px;line-height:1;cursor:pointer;align-items:center;justify-content:center;transition:.15s}
+.navtoggle:hover{color:#fff;border-color:var(--text-300)}
+@media(max-width:720px){
+  .navtoggle{display:inline-flex}
+  .navlinks{position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:4px;padding:12px 24px 18px;background:rgba(14,17,22,.98);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 24px 44px rgba(0,0,0,.5);display:none}
+  .navlinks.open{display:flex}
+  .navlinks .lk{padding:12px 14px;font-size:15px;border-radius:var(--radius-md)}
+  .navcta{font-size:13px;padding:8px 13px}
+}
 
 /* HERO */
 .hero{padding:96px 0 72px;text-align:center;position:relative}
@@ -185,14 +196,17 @@ footer .links a:hover{color:#fff}
 <header class="nav">
   <div class="wrap">
     <a href="#topo" class="brand">reddit brasil<span class="dot">●</span></a>
-    <nav class="navlinks">
-      <a class="lk" href="#servicos">Serviços</a>
-      <a class="lk" href="#metodo">Método</a>
-      <a class="lk" href="#porque">Por que Reddit</a>
-      <a class="lk" href="#planos">Planos</a>
-      <a class="lk" href="/blog/">Blog</a>
+    <div class="navright">
+      <nav class="navlinks" id="navmenu">
+        <a class="lk" href="#servicos">Serviços</a>
+        <a class="lk" href="#metodo">Método</a>
+        <a class="lk" href="#porque">Por que Reddit</a>
+        <a class="lk" href="#planos">Planos</a>
+        <a class="lk" href="/blog/">Blog</a>
+      </nav>
       <a class="btn btn-primary navcta" href="#contato">Agende uma call</a>
-    </nav>
+      <button class="navtoggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navmenu">☰</button>
+    </div>
   </div>
 </header>
 
@@ -442,6 +456,20 @@ footer .links a:hover{color:#fff}
 (function(){
   var EMAIL="contato@redditbrazil.com";
   document.getElementById("mailhint").textContent=EMAIL;
+  var navToggle=document.querySelector(".navtoggle");
+  var navMenu=document.getElementById("navmenu");
+  if(navToggle&&navMenu){
+    navToggle.addEventListener("click",function(){
+      var open=navMenu.classList.toggle("open");
+      navToggle.setAttribute("aria-expanded",open?"true":"false");
+    });
+    navMenu.querySelectorAll("a").forEach(function(a){
+      a.addEventListener("click",function(){
+        navMenu.classList.remove("open");
+        navToggle.setAttribute("aria-expanded","false");
+      });
+    });
+  }
   document.getElementById("copy").textContent="© "+new Date().getFullYear()+" Reddit Brasil — Sua marca, recomendada pela comunidade.";
   document.getElementById("leadform").addEventListener("submit",function(e){
     e.preventDefault();
