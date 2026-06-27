@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reddit Brasil — Sua marca, recomendada pela comunidade</title>
+<meta name="description" content="A primeira agência brasileira 100% focada em Reddit. Presença orgânica, anúncios e autoridade citável por IA — sem spam.">
+<meta property="og:title" content="Reddit Brasil — Sua marca, recomendada pela comunidade">
+<meta property="og:description" content="A primeira agência brasileira 100% focada em Reddit. Orgânico, pago e GEO/AEO — sem spam.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --verde-vivo:#00A859;--verde-400:#1FBE6E;--verde-600:#008A48;--verde:#009C3B;--verde-100:rgba(0,168,89,.12);
+  --amarelo:#FFDF00;--amarelo-400:#FFE84D;
+  --orange-500:#FF4500;--orange-400:#FF5C29;--orange-600:#E03D00;--orange-100:rgba(255,69,0,.10);
+  --azul-vivo:#2F80ED;--azul:#002776;
+  --bg-900:#0E1116;--bg-800:#161A21;--bg-700:#1E232C;--bg-600:#2A313C;
+  --text-100:#FFFFFF;--text-200:#F4F6F8;--text-300:#AEB6C2;--text-400:#6B7480;
+  --success:#00A859;--warning:#FFDF00;--danger:#FF4D4D;--info:#2F80ED;
+  --font-display:"Poppins","Montserrat",system-ui,sans-serif;
+  --font-body:"Inter",system-ui,-apple-system,sans-serif;
+  --font-mono:"Space Mono",ui-monospace,monospace;
+  --radius-sm:6px;--radius-md:10px;--radius-lg:16px;--radius-xl:24px;--radius-pill:999px;
+  --shadow-card:0 16px 44px rgba(0,0,0,.5);
+  --glow-orange:0 0 0 1px rgba(255,69,0,.4),0 8px 30px rgba(255,69,0,.25);
+  --glow-green:0 0 0 1px rgba(0,168,89,.30),0 10px 40px rgba(0,168,89,.18);
+  --grad-verde:linear-gradient(135deg,#1FBE6E 0%,#00A859 100%);
+  --grad-brasa:linear-gradient(135deg,#FF5C29 0%,#FF4500 100%);
+  --grad-brasil:linear-gradient(90deg,#1FBE6E 0%,#FFDF00 50%,#2F80ED 100%);
+  --maxw:1140px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg-900);color:var(--text-200);font-family:var(--font-body);line-height:1.65;-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(1000px 520px at 82% -8%,rgba(0,168,89,.16),transparent 60%),radial-gradient(720px 460px at -8% 6%,rgba(0,168,89,.06),transparent 55%);
+  background-attachment:fixed;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+a{color:inherit}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--verde-vivo)}
+.hl{color:var(--verde-vivo)}
+.rd{color:var(--orange-500)}
+
+/* NAV */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(14,17,22,.78);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:var(--font-display);font-weight:700;font-size:21px;letter-spacing:-.02em;color:#fff;text-decoration:none}
+.brand .dot{color:var(--orange-500)}
+.navlinks{display:flex;gap:6px;align-items:center}
+.navlinks a{color:var(--text-300);text-decoration:none;font-size:14px;font-weight:500;padding:8px 14px;border-radius:var(--radius-pill);transition:.15s}
+.navlinks a:hover{color:#fff;background:var(--bg-700)}
+.btn{font-family:var(--font-body);font-weight:600;font-size:15px;padding:12px 22px;border-radius:var(--radius-md);border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:.15s;white-space:nowrap}
+.btn-primary{background:var(--grad-brasa);color:#0E1116;font-weight:700}
+.btn-primary:hover{box-shadow:var(--glow-orange);transform:translateY(-1px)}
+.btn-identidade{background:var(--grad-verde);color:#fff}
+.btn-identidade:hover{box-shadow:var(--glow-green);transform:translateY(-1px)}
+.btn-secondary{background:transparent;border:1px solid var(--bg-600);color:var(--text-200)}
+.btn-secondary:hover{border-color:var(--text-300);color:#fff}
+.navcta{font-size:14px;padding:9px 18px}
+@media(max-width:720px){.navlinks .lk{display:none}}
+
+/* HERO */
+.hero{padding:96px 0 72px;text-align:center;position:relative}
+.hero .eyebrow{justify-content:center}
+.hero h1{font-family:var(--font-display);font-weight:700;font-size:clamp(36px,6.2vw,68px);line-height:1.04;letter-spacing:-.03em;color:#fff;margin:18px auto 0;max-width:14ch}
+.hero p.lead{font-size:clamp(16px,2.2vw,20px);color:var(--text-300);max-width:620px;margin:22px auto 0}
+.hero .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+.hero .micro{margin-top:18px;font-size:13px;color:var(--text-400)}
+.hero .micro b{color:var(--verde-vivo);font-weight:600}
+
+/* STAT BAND */
+.statband{border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.012)}
+.statband .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:34px 24px}
+@media(max-width:780px){.statband .wrap{grid-template-columns:repeat(2,1fr);gap:28px}}
+.stat .num{font-family:var(--font-display);font-weight:700;font-size:clamp(28px,4vw,40px);line-height:1;color:#fff;letter-spacing:-.02em}
+.stat .num span{color:var(--verde-vivo)}
+.stat .lab{font-size:13px;color:var(--text-300);margin-top:7px}
+
+/* SECTION */
+section{padding:84px 0}
+.sec-head{max-width:680px}
+.sec-head.center{margin:0 auto;text-align:center}
+h2.sec{font-family:var(--font-display);font-weight:700;font-size:clamp(28px,4vw,42px);color:#fff;letter-spacing:-.02em;line-height:1.1;margin-top:10px}
+.underline{width:48px;height:3px;background:linear-gradient(90deg,#00A859,rgba(0,168,89,0));border-radius:2px;margin-top:16px}
+.sec-head.center .underline{margin-left:auto;margin-right:auto;background:linear-gradient(90deg,rgba(0,168,89,0),#00A859,rgba(0,168,89,0))}
+.sec-desc{color:var(--text-300);font-size:16px;margin-top:16px}
+
+/* CARDS */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+@media(max-width:880px){.cards{grid-template-columns:1fr}}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.025),transparent),var(--bg-700);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow-card);position:relative}
+.card.feature{border-color:rgba(0,168,89,.35);box-shadow:var(--shadow-card),var(--glow-green)}
+.card .tag{position:absolute;top:-11px;left:24px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#0E1116;background:var(--verde-vivo);padding:5px 12px;border-radius:var(--radius-pill)}
+.card .ico{width:44px;height:44px;border-radius:12px;background:var(--bg-800);border:1px solid var(--bg-600);display:flex;align-items:center;justify-content:center;color:var(--verde-vivo);font-size:22px;margin-bottom:16px}
+.card h3{font-family:var(--font-display);font-weight:700;font-size:21px;color:#fff;margin-bottom:8px;letter-spacing:-.01em}
+.card p{font-size:14.5px;color:var(--text-300)}
+.card ul{list-style:none;margin-top:16px}
+.card li{font-size:14px;color:var(--text-200);padding:7px 0;border-top:1px solid rgba(255,255,255,.05);display:flex;gap:9px;align-items:flex-start}
+.card li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--verde-vivo);margin-top:8px;flex:none}
+
+/* METHOD */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:44px}
+@media(max-width:880px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+.step{padding:22px;border-radius:var(--radius-lg);background:var(--bg-800);border:1px solid rgba(255,255,255,.06)}
+.step .n{font-family:var(--font-mono);font-size:13px;color:var(--verde-vivo)}
+.step h4{font-family:var(--font-display);font-weight:600;font-size:17px;color:#fff;margin:10px 0 6px}
+.step p{font-size:13.5px;color:var(--text-300)}
+
+/* WHY */
+.why{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media(max-width:880px){.why{grid-template-columns:1fr;gap:32px}}
+.why ul{list-style:none;margin-top:20px}
+.why li{font-size:15px;color:var(--text-200);padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;gap:12px}
+.why li b{color:#fff;font-weight:600}
+.why li .ic{color:var(--verde-vivo);font-size:18px;flex:none}
+.whycard{background:var(--bg-700);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius-xl);padding:34px;box-shadow:var(--shadow-card)}
+.whycard .big{font-family:var(--font-display);font-weight:700;font-size:58px;line-height:1;color:var(--verde-vivo);letter-spacing:-.03em}
+.whycard .big.y{color:var(--amarelo)}
+.whycard .cap{font-size:14px;color:var(--text-300);margin-top:10px}
+.whycard hr{border:none;border-top:1px solid rgba(255,255,255,.07);margin:24px 0}
+
+/* CTA / CONTACT */
+.contact{position:relative;overflow:hidden;border-radius:var(--radius-xl);background:linear-gradient(180deg,#12161D,#0A0D12);border:1px solid rgba(255,255,255,.08);padding:48px;box-shadow:0 1px 0 rgba(255,255,255,.05) inset,0 28px 70px rgba(0,0,0,.55)}
+.contact::before{content:"";position:absolute;inset:0;background:radial-gradient(560px 240px at 88% -30%,rgba(0,168,89,.20),transparent 60%);pointer-events:none}
+.contact .inner{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+@media(max-width:880px){.contact{padding:32px}.contact .inner{grid-template-columns:1fr;gap:28px}}
+.contact h2{font-family:var(--font-display);font-weight:700;font-size:clamp(26px,3.4vw,36px);color:#fff;letter-spacing:-.02em;line-height:1.1}
+.contact .sub{color:var(--text-300);font-size:15px;margin-top:14px;max-width:42ch}
+.contact .trust{margin-top:22px;display:flex;flex-direction:column;gap:10px}
+.contact .trust div{font-size:14px;color:var(--text-200);display:flex;gap:10px;align-items:center}
+.contact .trust .ic{color:var(--verde-vivo)}
+form .field{margin-bottom:14px}
+form label{display:block;font-size:13px;font-weight:600;color:var(--text-200);margin-bottom:6px}
+form input,form select,form textarea{width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.10);color:#fff;font-family:var(--font-body);font-size:14px;padding:11px 14px;border-radius:var(--radius-md);outline:none;transition:.15s}
+form input::placeholder,form textarea::placeholder{color:var(--text-400)}
+form input:focus,form select:focus,form textarea:focus{border-color:var(--verde-vivo);box-shadow:var(--glow-green)}
+form select option{background:#11151C}
+form textarea{resize:vertical;min-height:84px}
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:520px){form .row{grid-template-columns:1fr}}
+form button{width:100%;margin-top:6px}
+.formnote{font-size:12px;color:var(--text-400);margin-top:12px;text-align:center}
+
+/* FOOTER */
+footer{border-top:1px solid rgba(255,255,255,.06);margin-top:84px;padding:48px 0 56px}
+footer .strip{height:3px;background:var(--grad-brasil);opacity:.5;border-radius:2px;max-width:220px;margin-bottom:28px}
+footer .frow{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer .brand{font-size:19px}
+footer .legal{font-size:12.5px;color:var(--text-400);max-width:560px;line-height:1.6}
+footer .links{display:flex;gap:18px}
+footer .links a{color:var(--text-300);font-size:13px;text-decoration:none}
+footer .links a:hover{color:#fff}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#topo" class="brand">reddit brasil<span class="dot">●</span></a>
+    <nav class="navlinks">
+      <a class="lk" href="#servicos">Serviços</a>
+      <a class="lk" href="#metodo">Método</a>
+      <a class="lk" href="#porque">Por que Reddit</a>
+      <a class="btn btn-primary navcta" href="#contato">Agende uma call</a>
+    </nav>
+  </div>
+</header>
+
+<a id="topo"></a>
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Agência de marketing no Reddit · Brasil</div>
+    <h1>Sua marca, <span class="hl">recomendada</span> pela comunidade no <span class="rd">Reddit</span><span class="rd">●</span></h1>
+    <p class="lead">A primeira agência brasileira 100% focada em Reddit. Construímos presença orgânica, anúncios e autoridade citável por IA — entrando pela regra de cada sub, sem spam.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#contato">Agende uma call estratégica</a>
+      <a class="btn btn-secondary" href="#servicos">Ver serviços</a>
+    </div>
+    <div class="micro"><b>Zero spam.</b> Contas oficiais, valor real, transparência com a comunidade.</div>
+  </div>
+</section>
+
+<div class="statband">
+  <div class="wrap">
+    <div class="stat"><div class="num">108<span>M</span></div><div class="lab">usuários ativos/dia no Reddit</div></div>
+    <div class="stat"><div class="num">+127<span>%</span></div><div class="lab">engajamento orgânico médio</div></div>
+    <div class="stat"><div class="num">#<span>2</span></div><div class="lab">fonte de treino de IA na web</div></div>
+    <div class="stat"><div class="num">3.0<span>x</span></div><div class="lab">ROAS potencial em mídia paga</div></div>
+  </div>
+</div>
+
+<section id="servicos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Serviços</div>
+      <h2 class="sec">Tudo que sua marca precisa <span class="hl">dentro do Reddit</span></h2>
+      <div class="underline"></div>
+      <p class="sec-desc">Do primeiro comentário útil ao anúncio que converte — operamos como gente nativa da comunidade, não como quem só "posta e torce".</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="ico">◇</div>
+        <h3>Gestão Orgânica</h3>
+        <p>Presença autêntica e estratégica nos subs certos, respeitando as regras de cada comunidade.</p>
+        <ul>
+          <li>Conta oficial e code of conduct</li>
+          <li>Posts e comentários de valor</li>
+          <li>Gestão e moderação de presença</li>
+        </ul>
+      </div>
+      <div class="card feature">
+        <span class="tag">Recomendado</span>
+        <div class="ico">◆</div>
+        <h3>Orgânico + Pago</h3>
+        <p>Escala completa: autoridade orgânica somada a um motor de anúncios com intenção comercial.</p>
+        <ul>
+          <li>Tudo do plano orgânico</li>
+          <li>Reddit Ads e segmentação por sub</li>
+          <li>Otimização contínua de ROAS</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ico">◎</div>
+        <h3>SEO / GEO &amp; IA</h3>
+        <p>Conteúdo âncora que rankeia no Google e vira resposta citada por ChatGPT, Gemini e AI Overviews.</p>
+        <ul>
+          <li>Posts âncora citáveis</li>
+          <li>Otimização para busca e LLMs</li>
+          <li>Autoridade de marca durável</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="metodo" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Método</div>
+      <h2 class="sec">Valor <span class="hl">antes</span> do pitch</h2>
+      <div class="underline"></div>
+      <p class="sec-desc">Um processo que transforma conversa em autoridade — citável por humanos e por IA.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h4>Escuta da comunidade</h4><p>Mapeamos os subs, as regras e o que sua audiência realmente pergunta.</p></div>
+      <div class="step"><div class="n">02</div><h4>Conteúdo de valor</h4><p>Entramos resolvendo problemas reais — sem spam, sem clickbait.</p></div>
+      <div class="step"><div class="n">03</div><h4>Autoridade citável</h4><p>Construímos posts âncora que viram referência e fonte para IA.</p></div>
+      <div class="step"><div class="n">04</div><h4>Mensuração</h4><p>Relatórios claros: engajamento, share of voice e intenção comercial.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="porque" style="padding-top:0">
+  <div class="wrap">
+    <div class="why">
+      <div>
+        <div class="eyebrow">Por que Reddit</div>
+        <h2 class="sec">Onde o brasileiro pergunta <span class="hl">"quem é confiável?"</span></h2>
+        <div class="underline"></div>
+        <ul>
+          <li><span class="ic">✦</span><span>É onde decisões de compra acontecem por <b>recomendação real</b>, não por anúncio interruptivo.</span></li>
+          <li><span class="ic">✦</span><span>Virou uma das <b>maiores fontes de treino de IA</b> — estar citado lá é estar nas respostas do ChatGPT e do Google.</span></li>
+          <li><span class="ic">✦</span><span>Comunidades hostis a spam <b>premiam quem entrega valor</b> — exatamente como a gente opera.</span></li>
+        </ul>
+      </div>
+      <div class="whycard">
+        <div class="big">108<span style="font-size:34px">M</span></div>
+        <div class="cap">pessoas ativas todos os dias, em milhares de comunidades de nicho.</div>
+        <hr>
+        <div class="big y">+127<span style="font-size:34px">%</span></div>
+        <div class="cap">de engajamento orgânico médio nos projetos que operamos pela regra do sub.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" style="padding-top:0">
+  <div class="wrap">
+    <div class="contact">
+      <div class="inner">
+        <div>
+          <h2>Vamos colocar sua marca <span class="hl">na conversa</span>.</h2>
+          <p class="sub">Conte sobre sua marca e seus subs de interesse. Respondemos com um diagnóstico inicial — sem compromisso.</p>
+          <div class="trust">
+            <div><span class="ic">✓</span> Diagnóstico inicial gratuito</div>
+            <div><span class="ic">✓</span> Sem spam, sem promessas mágicas</div>
+            <div><span class="ic">✓</span> Estratégia white-hat, conta oficial</div>
+          </div>
+        </div>
+        <form id="leadform">
+          <div class="row">
+            <div class="field"><label for="nome">Nome</label><input id="nome" name="nome" type="text" placeholder="Seu nome" required></div>
+            <div class="field"><label for="email">E-mail</label><input id="email" name="email" type="email" placeholder="voce@empresa.com.br" required></div>
+          </div>
+          <div class="field"><label for="site">Site da marca</label><input id="site" name="site" type="text" placeholder="https://"></div>
+          <div class="field"><label for="objetivo">Objetivo</label>
+            <select id="objetivo" name="objetivo">
+              <option>Presença orgânica no Reddit</option>
+              <option>Orgânico + Pago</option>
+              <option>SEO / GEO &amp; IA</option>
+              <option>Ainda não sei — quero orientação</option>
+            </select>
+          </div>
+          <div class="field"><label for="msg">Mensagem</label><textarea id="msg" name="msg" placeholder="Conte sobre sua marca e seus subs de interesse..."></textarea></div>
+          <button class="btn btn-primary" type="submit">Agende uma call estratégica</button>
+          <div class="formnote">Ao enviar, abrimos seu e-mail com a mensagem pronta para <span id="mailhint">contato@redditbrazil.com</span>.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="strip"></div>
+    <div class="frow">
+      <div>
+        <a href="#topo" class="brand">reddit brasil<span class="dot">●</span></a>
+        <p class="legal" style="margin-top:12px">"Reddit" é marca registrada da Reddit, Inc. A Reddit Brasil é uma agência independente e não é afiliada à Reddit, Inc.</p>
+      </div>
+      <div class="links">
+        <a href="#servicos">Serviços</a>
+        <a href="#metodo">Método</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
+    <p class="legal" style="margin-top:24px" id="copy">© Reddit Brasil — Sua marca, recomendada pela comunidade.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var EMAIL="contato@redditbrazil.com";
+  document.getElementById("mailhint").textContent=EMAIL;
+  document.getElementById("copy").textContent="© "+new Date().getFullYear()+" Reddit Brasil — Sua marca, recomendada pela comunidade.";
+  document.getElementById("leadform").addEventListener("submit",function(e){
+    e.preventDefault();
+    var g=function(id){return (document.getElementById(id).value||"").trim();};
+    var subject="[Reddit Brasil] Contato — "+(g("nome")||"novo lead");
+    var body="Nome: "+g("nome")+"\nE-mail: "+g("email")+"\nSite: "+g("site")+"\nObjetivo: "+g("objetivo")+"\n\nMensagem:\n"+g("msg");
+    window.location.href="mailto:"+EMAIL+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>
