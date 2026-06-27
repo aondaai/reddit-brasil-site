@@ -1,0 +1,111 @@
+/* Reddit Brasil — folha de estilo compartilhada (design system v1.2)
+   Usada por páginas de serviço e posts de blog. Home (index.html) tem CSS próprio. */
+:root{
+  /* Verde — primária (identidade) */
+  --verde-vivo:#00A859; --verde-400:#1FBE6E; --verde-600:#008A48; --verde-100:rgba(0,168,89,.12); --verde:#009C3B;
+  /* Amarelo — secundária (destaque) */
+  --amarelo:#FFDF00; --amarelo-400:#FFE84D;
+  /* Laranja Reddit — assinatura (acento) */
+  --orange-500:#FF4500; --orange-400:#FF5C29; --orange-600:#E03D00; --orange-100:rgba(255,69,0,.10);
+  /* Azul — apoio */
+  --azul-vivo:#2F80ED;
+  /* Superfícies */
+  --bg-900:#0E1116; --bg-800:#161A21; --bg-700:#1E232C; --bg-600:#2A313C;
+  /* Texto */
+  --text-100:#FFFFFF; --text-200:#F4F6F8; --text-300:#AEB6C2; --text-400:#6B7480;
+  /* Tipografia */
+  --font-display:"Poppins","Montserrat",system-ui,sans-serif;
+  --font-body:"Inter",system-ui,sans-serif;
+  --font-mono:"Space Mono",ui-monospace,monospace;
+  /* Espaçamento */
+  --space-4:16px; --space-5:24px; --space-6:32px; --space-7:48px; --space-8:64px; --space-9:96px;
+  /* Raio */
+  --radius-sm:6px; --radius-md:10px; --radius-lg:16px; --radius-xl:24px; --radius-pill:999px;
+  /* Efeitos */
+  --shadow-card:0 16px 44px rgba(0,0,0,.5);
+  --glow-orange:0 0 0 1px rgba(255,69,0,.4),0 8px 30px rgba(255,69,0,.25);
+  --glow-green:0 0 0 1px rgba(0,168,89,.30),0 10px 40px rgba(0,168,89,.18);
+  --grad-verde:linear-gradient(135deg,#1FBE6E 0%,#00A859 100%);
+  --grad-brasa:linear-gradient(135deg,#FF5C29 0%,#FF4500 100%);
+  --grad-brasil:linear-gradient(90deg,#1FBE6E 0%,#FFDF00 50%,#2F80ED 100%);
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; }
+body{ font-family:var(--font-body); background:var(--bg-900); color:var(--text-200); line-height:1.65; -webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(700px 320px at 85% -12%, rgba(0,168,89,.10), transparent 60%); background-repeat:no-repeat; }
+.wrap{ max-width:1100px; margin:0 auto; padding:0 24px; }
+.article{ max-width:760px; margin:0 auto; padding:0 24px; }
+section{ padding:var(--space-9) 0; }
+
+h1,h2,h3{ font-family:var(--font-display); color:var(--text-100); letter-spacing:-.01em; }
+h1{ font-size:clamp(2.25rem,5vw,3.5rem); font-weight:800; line-height:1.05; letter-spacing:-.02em; }
+h2{ font-size:clamp(1.6rem,3vw,2rem); font-weight:700; line-height:1.15; margin-bottom:var(--space-5); }
+h3{ font-size:1.2rem; font-weight:700; line-height:1.2; }
+p{ color:var(--text-300); }
+.lead{ font-size:1.125rem; color:var(--text-200); max-width:62ch; }
+.verde{ color:var(--verde-vivo); } .reddit{ color:var(--orange-500); } .amarelo{ color:var(--amarelo); }
+
+.eyebrow{ font-size:.75rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--verde-vivo); margin-bottom:var(--space-4); display:inline-block; }
+.strip{ height:3px; width:64px; background:linear-gradient(90deg,#00A859,transparent); margin-top:var(--space-4); border-radius:2px; }
+
+header{ position:sticky; top:0; z-index:10; backdrop-filter:blur(10px); background:rgba(14,17,22,.7); border-bottom:1px solid var(--bg-600); }
+.nav{ display:flex; align-items:center; justify-content:space-between; height:64px; }
+.logo{ font-family:var(--font-display); font-weight:800; font-size:1.15rem; color:var(--text-100); text-decoration:none; }
+.logo .dot{ color:var(--orange-500); }
+
+.btn{ display:inline-block; font-weight:600; text-decoration:none; padding:12px 24px; border-radius:var(--radius-md); transition:.18s; }
+.btn-reddit{ background:var(--grad-brasa); color:var(--bg-900); } .btn-reddit:hover{ box-shadow:var(--glow-orange); }
+.btn-ghost{ color:var(--verde-vivo); border:1px solid var(--bg-600); } .btn-ghost:hover{ border-color:var(--verde-vivo); box-shadow:var(--glow-green); }
+
+.hero{ padding-top:var(--space-9); padding-bottom:var(--space-8); }
+.hero .lead{ margin-top:var(--space-5); }
+.hero-cta{ margin-top:var(--space-7); display:flex; gap:16px; flex-wrap:wrap; }
+
+.pill{ display:inline-flex; align-items:center; gap:8px; font-size:.8rem; font-weight:600; padding:6px 14px; border-radius:var(--radius-pill); }
+.pill-verde{ color:var(--verde-vivo); background:var(--verde-100); }
+
+.grid{ display:grid; gap:24px; }
+.grid-2{ grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
+.grid-3{ grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
+.card{ background:var(--bg-700); border:1px solid rgba(255,255,255,.07); border-radius:var(--radius-lg); padding:var(--space-6); box-shadow:var(--shadow-card); }
+.card.hl{ border-left:3px solid var(--verde-vivo); }
+.card h3{ margin-bottom:12px; }
+.card .num{ font-family:var(--font-display); font-weight:800; font-size:2.25rem; color:var(--verde-vivo); line-height:1; }
+.card .num .u{ color:var(--text-300); font-size:1.25rem; }
+.card small{ display:block; color:var(--text-400); font-size:.8rem; margin-top:8px; }
+
+.fmt{ display:flex; gap:14px; align-items:flex-start; }
+.fmt .dotmark{ color:var(--verde-vivo); font-weight:800; }
+
+.step{ display:flex; gap:20px; padding:var(--space-5) 0; border-bottom:1px solid var(--bg-600); }
+.step:last-child{ border-bottom:none; }
+.step .n{ font-family:var(--font-mono); font-weight:700; color:var(--verde-vivo); font-size:1.1rem; min-width:42px; }
+
+.qa{ max-width:760px; }
+.qa .item{ padding:var(--space-5) 0; border-bottom:1px solid var(--bg-600); }
+.qa h2{ margin-bottom:12px; font-size:1.35rem; } .qa h3{ margin-bottom:10px; }
+
+ul.clean{ list-style:none; margin-top:10px; }
+ul.clean li{ padding:6px 0; color:var(--text-300); }
+ul.clean li strong{ color:var(--text-100); }
+ul.clean li::before{ content:"✓"; color:var(--verde-vivo); margin-right:10px; font-weight:700; }
+ul.clean.dot li::before{ content:"●"; font-size:.7rem; vertical-align:middle; font-weight:400; }
+ul.clean.no li::before{ content:"✕"; color:var(--orange-400); }
+
+.cta-band{ text-align:center; } .cta-band .card{ background:var(--bg-800); padding:var(--space-8); }
+.muted-note{ font-size:.8rem; color:var(--text-400); font-style:italic; margin-top:var(--space-5); }
+
+/* Blog-specific */
+.meta{ color:var(--text-400); font-size:.85rem; margin-bottom:var(--space-6); } .meta span{ color:var(--verde-vivo); }
+.tldr{ background:var(--bg-700); border:1px solid rgba(255,255,255,.07); border-left:3px solid var(--verde-vivo); border-radius:var(--radius-lg); padding:var(--space-6); box-shadow:var(--shadow-card); margin:var(--space-6) 0; }
+.tldr strong{ color:var(--text-100); }
+table{ width:100%; border-collapse:collapse; margin:var(--space-5) 0; font-size:.95rem; }
+th,td{ text-align:left; padding:12px 14px; border-bottom:1px solid var(--bg-600); }
+th{ font-family:var(--font-display); color:var(--text-100); font-weight:600; font-size:.85rem; text-transform:uppercase; letter-spacing:.05em; }
+td:first-child{ color:var(--text-200); } tr.hl td{ color:var(--verde-vivo); font-weight:600; }
+.note{ background:var(--orange-100); border:1px solid rgba(255,69,0,.25); border-radius:var(--radius-md); padding:var(--space-5); font-size:.9rem; color:var(--text-200); margin:var(--space-6) 0; } .note strong{ color:var(--orange-400); }
+
+footer{ border-top:1px solid var(--bg-600); padding:var(--space-7) 0; color:var(--text-400); font-size:.85rem; }
+.footstrip{ height:3px; background:var(--grad-brasil); opacity:.85; }
+
+a.tlink{ color:var(--azul-vivo); }

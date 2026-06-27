@@ -26,7 +26,12 @@ O Render faz o deploy sozinho.
 - `/` — `index.html` (home: hero, serviços, método, por que Reddit, planos, contato)
 - `/reddit-seo-geo/` — serviço flagship SEO & GEO/AEO
 - `/reddit-ads/` — serviço Reddit Ads
+- `/gestao-organica-reddit/` — serviço Gestão Orgânica
+- `/crescer-subreddit/` — serviço Crescimento de Subreddit
+- `/monitoramento-reddit/` — serviço Monitoramento & Social Listening
+- `/reputacao-reddit/` — serviço Gestão de Reputação
 - `/codigo-de-conduta/` — página de confiança (white-hat / Zero Spam)
+- `assets/site.css` — CSS compartilhado das páginas de serviço e blog (home tem CSS próprio)
 - `/blog/` — índice do blog
 - `/blog/quanto-custa-anunciar-no-reddit/` — post âncora (custo de Reddit Ads)
 - `/blog/como-crescer-um-subreddit-do-zero/` — post âncora (crescimento de comunidade)
